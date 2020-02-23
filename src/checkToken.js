@@ -1,4 +1,4 @@
-const validToken = require("./libs/validToken.js");
+const { validToken } = require("@axioms/express-js");
 
 const checkToken = validToken({
     axiomsDomain: process.env.AXIOMS_DOMAIN,
