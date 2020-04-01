@@ -49,7 +49,7 @@
 			"response": []
 		},
 		{
-			"name": "Admin",
+			"name": "Role",
 			"request": {
 				"auth": {
 					"type": "noauth"
@@ -63,12 +63,12 @@
 					}
 				],
 				"url": {
-					"raw": "{{host}}/admin",
+					"raw": "{{host}}/role",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"admin"
+						"role"
 					]
 				}
 			},

@@ -8,7 +8,7 @@ require('dotenv').config();
 const middlewares = require('./middlewares');
 const public = require('./apis/public');
 const private = require('./apis/private');
-const admin = require('./apis/admin');
+const role = require('./apis/role');
 
 const app = express();
 
@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 
 app.use('/public', public);
 app.use('/private', private);
-app.use('/admin', admin);
+app.use('/role', role);
 
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);

@@ -4,9 +4,9 @@ const { validScope } = require('@axioms/express-js');
 
 const router = express.Router();
 
-router.get('/', checkToken, validScope(['tenant:owner']), (req, res) => {
+router.get('/', checkToken, validScope(['sample:role']), (req, res) => {
     res.json({
-        message: 'All good. You are authenticated as admin!'
+        message: 'All good. You are authenticated with role sample:role!'
     });
 });
 

@@ -16,7 +16,7 @@
     },
     "license": "MIT",
     "dependencies": {
-        "@axioms/express-js": "^0.0.2",
+        "@axioms/express-js": "^0.0.5",
         "axios": "^0.19.2",
         "cors": "^2.8.5",
         "dotenv": "^8.2.0",
