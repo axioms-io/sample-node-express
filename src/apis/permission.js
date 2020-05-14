@@ -24,7 +24,7 @@ router.patch('/', checkToken, hasRequiredPermissions(['sample:update']), (req, r
     });
 });
 
-router.delete('/', checkToken, hasRequiredPermissions(['sample:deletes']), (req, res) => {
+router.delete('/', checkToken, hasRequiredPermissions(['sample:delete']), (req, res) => {
     res.json({
         message: 'Sample deleted.'
     });

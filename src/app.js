@@ -19,7 +19,7 @@ app.use(cors());
 
 app.get('/', (req, res) => {
     res.json({
-        api: 'Your Services'
+        api: 'Express Sample APIs'
     });
 });
 
