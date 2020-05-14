@@ -1,12 +1,36 @@
 const express = require('express');
 const checkToken = require('../checkToken.js');
-const { validScope } = require('@axioms/express-js');
+const {
+    hasRequiredRoles
+} = require('@axioms/express-js');
 
 const router = express.Router();
 
-router.get('/', checkToken, validScope(['sample:role']), (req, res) => {
+router.all('/', checkToken, hasRequiredRoles(['sample:role']), (req, res) => {
+    var msg;
+    switch (req.method) {
+        case 'GET':
+            msg = "Sample read."
+            break;
+
+        case 'POST':
+            msg = "Sample created."
+            break;
+
+        case 'PATCH':
+            msg = "Sample updated."
+            break;
+
+        case 'DELETE':
+            msg = "Sample deleted."
+            break;
+
+        default:
+            msg = "Action not support"
+            break;
+    }
     res.json({
-        message: 'All good. You are authenticated with role sample:role!'
+        message: msg
     });
 });
 

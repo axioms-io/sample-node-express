@@ -9,6 +9,7 @@ const middlewares = require('./middlewares');
 const public = require('./apis/public');
 const private = require('./apis/private');
 const role = require('./apis/role');
+const permission = require('./apis/permission');
 
 const app = express();
 
@@ -25,9 +26,9 @@ app.get('/', (req, res) => {
 app.use('/public', public);
 app.use('/private', private);
 app.use('/role', role);
+app.use('/permission', permission);
 
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);
-
 
 module.exports = app;
